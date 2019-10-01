@@ -1,22 +1,32 @@
 {
     "name": "seth/laravel-ses",
     "description": "Something else",
-    "type": "library",
-    "require": {
-        "paquettg/php-html-parser": "^2.1",
-        "aws/aws-php-sns-message-validator": "^1.5",
-        "symfony/psr-http-message-bridge": "^1.2",
-        "zendframework/zend-diactoros": "^2.1"
-    },
-    "require-dev": {
-        "orchestra/database": "^4.0",
-        "orchestra/testbench": "^4.0"
-    },
+    "require": {},
     "license": "MIT",
     "authors": [
         {
             "name": "Seth",
             "email": "seth.abaquita@executivemosaic.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "oliveready7\\LaravelSes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+       "psr-4": {
+           "oliveready7\\LaravelSes\\Tests\\": "tests/"
+       }
+   },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "oliveready7\\LaravelSes\\LaravelSesServiceProvider"
+            ],
+            "aliases": {
+                "SesMail": "oliveready7\\LaravelSes\\SesMail"
+            }
+        }
+    }
 }

@@ -28,7 +28,5 @@
                 "SesMail": "oliveready7\\LaravelSes\\SesMail"
             }
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
